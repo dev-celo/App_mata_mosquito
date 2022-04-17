@@ -1,5 +1,7 @@
 html{
     cursor: url(../imagens/mata_mosca.png) 30 30, auto;
+
+    min-width: 400px;
 }
 body{
     background: url(../imagens/bg.jpg);
