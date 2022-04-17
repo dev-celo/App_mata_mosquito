@@ -1,5 +1,6 @@
 body{
-    background: url(../imagens/bg.jpg) no-repeat;
+    background: url(../imagens/bg.jpg);
+    background-repeat: repeat-y;
     background-size: 100%;
 }
 .mosquito1{
