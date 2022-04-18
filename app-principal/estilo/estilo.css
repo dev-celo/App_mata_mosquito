@@ -1,11 +1,11 @@
 html{
     cursor: url(../imagens/mata_mosca.png) 30 30, auto;
-
     min-width: 400px;
 }
 body{
-    background: url(../imagens/bg.jpg);
+    background: url(../imagens/bg.jpg) repeat-y;
     background-size: 100%;
+    scrollbar-width: none;
 }
 .mosquito1{
     width: 50px;
@@ -42,4 +42,11 @@ body{
     float: left;
     font-size: 20px;
     font-weight: bold;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .logo-vitoria{
+        width: 50%;
+    }
 }
