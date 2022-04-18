@@ -28,22 +28,6 @@ function ajustaTamanhoPalcoJogo() {
 
 ajustaTamanhoPalcoJogo()
 
-var cronometro = setInterval(function(){
-    
-    tempo -= 1
-
-    if(tempo < 0){
-
-        clearInterval(cronometro)
-        clearInterval(criarMosquito)
-        window.location.href = 'vitoria.html'
-    }else{
-        document.getElementById('cronometro').innerHTML = tempo
-    }
-    
-
-}, 1000)
-
 function posicaoRandomica(){
     //remover id mosquito anterior(caso exista)
     if(document.getElementById('mosquito')){

@@ -14,6 +14,7 @@
     <title>Game mata mosquito</title>
 
     <script>
+        //Responsável por pegar o elemento nivel via url para app2(pag de execussão do game)
         function iniciarJogo(){
             var nivel = (document.getElementById('nivel').value)
 
@@ -24,21 +25,23 @@
 
             window.location.href = 'app2.html?' + nivel
         }
+        
     </script>
 </head>
 <body onresize="ajustaTamanhoPalcoJogo()">
-
+    
+    <!-- abertura do container -->
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col com-md-12">
                 <div class="d-flex justify-content-center">
-                    <img src="imagens/game.png" alt="">
+                    <img src="imagens/game.png" alt="" class="img-fluid">
                 </div>
             </div>
         </div>
-
+        <!-- Select nivel -->
         <div class="row">
-            <div class="col">
+            <div class="col col-md-12">
                 <div class="d-flex justify-content-center">
                     <div class="mb-2">
                         <select class="form-control" name="selectnivel" id="nivel">
@@ -51,7 +54,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- button redireciona link game + nivel -->
         <div class="row">
             <div class="col">
                 <div class="d-flex justify-content-center">
@@ -60,6 +63,6 @@
             </div>
         </div>
     </div>
-
+    <!-- /container -->
 </body>
 </html>
