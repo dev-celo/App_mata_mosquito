@@ -18,7 +18,7 @@
     <!-- Painel de vidas e cronometro -->
     <div class="container">
         <div class="row">
-            <div class="col col-md-12">
+            <div class="col-6 col-md-12">
                 <div class="painel">
                     <div class="vidas">
                         <img id="vida1" src="imagens/coracao_cheio.png" alt="">
@@ -31,8 +31,19 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="numero-mosquitos bg-danger rounded">
+                    <div class="d-flex justify-content-center">
+                        <span class="">Número de mosquitos mortos:</span>
+                        <span class="margin-left" id="quantidade-mosquitos"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Fim painel de vidas e cronometro -->
+
 
     <!-- script -->
     <script>
@@ -46,11 +57,11 @@
             if (tempo < 0) {
                 clearInterval(cronometro)
                 clearInterval(criarMosquito)
-                window.location.href = 'vitoria.html'
+                window.location.href = 'vitoria.html?' + qtdMosquito
             } else {
                 document.getElementById('cronometro').innerHTML = tempo
+                document.getElementById('quantidade-mosquitos').innerHTML = qtdMosquito
             }
-
 
         }, 1000)
 
@@ -58,6 +69,7 @@
         var criarMosquito = setInterval(function () {
             posicaoRandomica()
         }, criaMosquitoTempo)
+
     </script>
 
 </body>

@@ -43,6 +43,15 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+.numero-mosquitos{
+    width: 30%;
+}
+.margin-left{
+    margin-left: 3%;
+}
+.center{
+    text-transform: uppercase;
+}
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {

@@ -1,22 +1,25 @@
 var altura = 0
 var largura = 0
 var vidas = 1
-var tempo = 17
-
+var tempo = 15
 var criaMosquitoTempo = 1500
+var qtdMosquito = 0
+
 
 var nivel = window.location.search
 nivel = nivel.replace('?', '')
 
-if(nivel == 'HTML'){
+if(nivel == 'html'){
     //1500
     criaMosquitoTempo = 1500
-}else if(nivel == 'CSS'){
+}else if(nivel == 'css'){
     //1000
     criaMosquitoTempo = 1000
+    tempo = 20
 }else if(nivel == 'Javascript'){
     //700
     criaMosquitoTempo = 700
+    tempo = 25
 }
 
 function ajustaTamanhoPalcoJogo() {
@@ -60,11 +63,13 @@ function posicaoRandomica(){
     fotoMosquito.style.position = 'absolute'
     fotoMosquito.id = 'mosquito'
     fotoMosquito.onclick = function(){
+        qtdMosquito++
         this.remove()
     }
-    
+
     document.body.appendChild(fotoMosquito)
 }
+
 
 function tamanhoMosquitoAleatorio() {
     var tamMosquito = Math.floor(Math.random() * 3)
